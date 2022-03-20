@@ -1,5 +1,5 @@
 import { Pad } from "../model/Pad";
-import { refreshPads } from "./helpers";
+import { getPadsFromUrls, refreshPads } from "./helpers";
 
 export type LooperStateType = {
   pads: Pad[];
@@ -18,15 +18,7 @@ export type ActionType =
 export const getDefaultLooperReducerState = (
   urls: string[]
 ): LooperStateType => ({
-  pads: urls.map((url) => {
-    const a = new Audio(url);
-    return {
-      id: url,
-      active: false,
-      audio: a,
-      isPlaying: !a.paused,
-    };
-  }),
+  pads: getPadsFromUrls(urls),
 });
 
 export const looperReducer = (state: LooperStateType, action: ActionType) => {

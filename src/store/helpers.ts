@@ -9,3 +9,14 @@ export const refreshPads = (pads: Pad[]) => {
     };
   });
 };
+
+export const getPadsFromUrls = (urls: string[]) =>
+  urls.map((url) => {
+    const audio = new Audio(url);
+    return {
+      id: url,
+      active: false,
+      audio,
+      isPlaying: !audio.paused,
+    };
+  });

@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Looper test Looper - renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="sc-dkPtRN jFSCBy"
+    >
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+      <div
+        aria-label="Pad"
+        class="sc-gsDKAQ iCqTAi"
+      >
+        <svg
+          height="100px"
+          width="100px"
+        >
+          play.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="sc-hKwDye iaeFjz"
+    >
+      <button
+        aria-label="Play All"
+        class="sc-bdvvtL ljBphM"
+        role="button"
+        type="button"
+      >
+        <svg
+          style="width: 40px; height: 40px;"
+        >
+          button_play.svg
+        </svg>
+      </button>
+      <button
+        aria-label="Stop All"
+        class="sc-bdvvtL vXBuu"
+        role="button"
+        type="button"
+      >
+        <svg
+          style="width: 40px; height: 40px;"
+        >
+          button_pause.svg
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

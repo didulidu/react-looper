@@ -16,6 +16,7 @@ const Pad: FC<PadProps> = ({ pad, onPress }) => {
         onClick={() => onPress(pad.id)}
         isPressed={pad.active}
         isPlaying={pad.isPlaying}
+        aria-label="Pad"
       >
         <Icon width="100px" height="100px" />
       </StyledPad>

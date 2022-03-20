@@ -20,6 +20,7 @@ export const useLooperContext = () => useContext(LooperContext);
 
 export const LooperProvider: FC = ({ children }) => {
   const urls = require.context("../../public", false, /\.(mp3|mpga)$/).keys();
+  console.log(urls);
   const [intervalId, setIntervalId] = useState<null | NodeJS.Timer>(null);
 
   const [{ pads }, dispatch] = useReducer(

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pad test Looper renders correctly 1`] = `
+<div>
+  <div
+    aria-label="Pad"
+    class="sc-bdvvtL lnJDnb"
+  >
+    <svg
+      height="100px"
+      width="100px"
+    >
+      play.svg
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Pad test Pad active 1`] = `
+<div>
+  <div
+    aria-label="Pad"
+    class="sc-bdvvtL enegtu"
+  >
+    <svg
+      height="100px"
+      width="100px"
+    >
+      will_play.svg
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Pad test Pad playing 1`] = `
+<div>
+  <div
+    aria-label="Pad"
+    class="sc-bdvvtL dAqfmc"
+  >
+    <svg
+      height="100px"
+      width="100px"
+    >
+      playing.svg
+    </svg>
+  </div>
+</div>
+`;

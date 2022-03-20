@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Pad from "./Pad";
+import Pad from "../components/atoms/Pad/Pad";
 
 export default {
   title: "Components/Pad",

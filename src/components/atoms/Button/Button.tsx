@@ -10,6 +10,7 @@ const Button: FC<ButtonProps> = ({ children, onClick, color, ...rest }) => {
   return (
     <StyledButton
       type="button"
+      role="button"
       backgroundColor={color}
       onClick={onClick}
       {...rest}

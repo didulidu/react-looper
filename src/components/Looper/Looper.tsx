@@ -17,10 +17,10 @@ const Looper: FC = () => {
         })}
       </StyledGrid>
       <StyledFooter>
-        <Button onClick={playAll} color="lightblue">
+        <Button onClick={playAll} color="lightblue" aria-label="Play All">
           <ButtonPlayIcon style={buttonDimension} />
         </Button>
-        <Button onClick={stopAll} color="indianred">
+        <Button onClick={stopAll} color="indianred" aria-label="Stop All">
           <ButtonPauseIcon style={buttonDimension} />
         </Button>
       </StyledFooter>

@@ -1,21 +1,13 @@
-import { FC, memo, useEffect } from "react";
+import { FC, memo } from "react";
 import { ReactComponent as Playing } from "../../../assets/icons/playing.svg";
 import { ReactComponent as Play } from "../../../assets/icons/play.svg";
 import { ReactComponent as WillPlay } from "../../../assets/icons/will_play.svg";
 import { PadProps } from "./types";
 import { StyledPad } from "./styles";
+import useAudio from "../../../hooks/useAudio";
 
 const Pad: FC<PadProps> = ({ pad, onPress }) => {
-  useEffect(() => {
-    pad.audio.currentTime = 0;
-    if (pad.isPlaying) {
-      pad.audio.play();
-      pad.audio.loop = true;
-    } else {
-      pad.audio.pause();
-    }
-  }, [pad.audio, pad.isPlaying]);
-
+  useAudio(pad);
   const Icon = pad.active ? (pad.isPlaying ? Playing : WillPlay) : Play;
 
   return (

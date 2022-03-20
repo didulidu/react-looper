@@ -17,4 +17,9 @@ export const StyledPad = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 900px) {
+    width: 100px;
+    height: 100px;
+  }
 `;

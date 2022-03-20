@@ -18,7 +18,7 @@ const Pad: FC<PadProps> = ({ pad, onPress }) => {
         isPlaying={pad.isPlaying}
         aria-label="Pad"
       >
-        <Icon width="100px" height="100px" />
+        <Icon width="50%" height="50%" />
       </StyledPad>
     </>
   );

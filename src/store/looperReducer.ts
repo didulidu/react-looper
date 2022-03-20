@@ -1,5 +1,5 @@
 import { Pad } from "../model/Pad";
-import { updatePads } from "./helpers/updateStateHelpers";
+import { refreshPads } from "./helpers";
 
 export type LooperStateType = {
   pads: Pad[];
@@ -75,7 +75,7 @@ export const looperReducer = (state: LooperStateType, action: ActionType) => {
       return { ...state, pads: updatedPads };
     }
     case "startInterval": {
-      return { ...state, pads: updatePads(state.pads) };
+      return { ...state, pads: refreshPads(state.pads) };
     }
   }
 };

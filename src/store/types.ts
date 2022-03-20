@@ -10,5 +10,4 @@ export type LooperContextType = {
 
 export type LooperProviderProps = {
   children: ReactNode;
-  initialState?: { pads: Pad[] };
 };

@@ -20,3 +20,12 @@ export const getPadsFromUrls = (urls: string[]) =>
       isPlaying: !audio.paused,
     };
   });
+
+export const getAudioDuration = async (): Promise<number> => {
+  return new Promise((resolve, _) => {
+    const audio = new Audio("./loop1.mp3");
+    audio.onloadedmetadata = function () {
+      resolve(audio.duration);
+    };
+  });
+};

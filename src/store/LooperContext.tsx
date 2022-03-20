@@ -8,6 +8,7 @@ import {
   useReducer,
   useState,
 } from "react";
+import { getAudioDuration } from "./helpers";
 
 import { looperReducer, getDefaultLooperReducerState } from "./looperReducer";
 import { LooperContextType, LooperProviderProps } from "./types";
@@ -18,15 +19,19 @@ export const LooperContext = createContext<LooperContextType>(
 
 export const useLooperContext = () => useContext(LooperContext);
 
-export const LooperProvider: FC<LooperProviderProps> = ({
-  initialState,
-  children,
-}) => {
+export const LooperProvider: FC<LooperProviderProps> = ({ children }) => {
   const [intervalId, setIntervalId] = useState<null | NodeJS.Timer>(null);
-
+  const [duration, setDuration] = useState<number>(0);
+  useEffect(() => {
+    async function getDuration() {
+      const duration = await getAudioDuration();
+      setDuration(duration);
+    }
+    getDuration();
+  }, []);
   const [{ pads }, dispatch] = useReducer(
     looperReducer,
-    initialState ?? getDefaultLooperReducerState()
+    getDefaultLooperReducerState()
   );
 
   const isLooperInactive = useMemo(
@@ -40,11 +45,13 @@ export const LooperProvider: FC<LooperProviderProps> = ({
   );
 
   const resetInterval = useCallback(() => {
+    if (!duration) return;
+
     const intervalId = setInterval(() => {
       dispatch({ type: "startInterval" });
-    }, 8.01955 * 1000);
+    }, duration * 1000);
     setIntervalId(intervalId);
-  }, []);
+  }, [duration]);
 
   useEffect(() => {
     if (shouldStartInterval) {

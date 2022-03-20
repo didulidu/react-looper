@@ -3,7 +3,7 @@ import { ReactComponent as Playing } from "../../../assets/icons/playing.svg";
 import { ReactComponent as Play } from "../../../assets/icons/play.svg";
 import { ReactComponent as WillPlay } from "../../../assets/icons/will_play.svg";
 import { PadProps } from "./types";
-import { StyledPad } from "./styles";
+import { iconDimension, StyledPad } from "./styles";
 import useAudio from "../../../hooks/useAudio";
 
 const Pad: FC<PadProps> = ({ pad, onPress }) => {
@@ -18,7 +18,7 @@ const Pad: FC<PadProps> = ({ pad, onPress }) => {
         isPlaying={pad.isPlaying}
         aria-label="Pad"
       >
-        <Icon width="50%" height="50%" />
+        <Icon {...iconDimension} />
       </StyledPad>
     </>
   );

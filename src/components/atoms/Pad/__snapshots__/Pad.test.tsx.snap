@@ -4,11 +4,11 @@ exports[`Pad test Looper renders correctly 1`] = `
 <div>
   <div
     aria-label="Pad"
-    class="sc-bdvvtL lnJDnb"
+    class="sc-bdvvtL fngWLE"
   >
     <svg
-      height="100px"
-      width="100px"
+      height="50%"
+      width="50%"
     >
       play.svg
     </svg>
@@ -20,11 +20,11 @@ exports[`Pad test Pad active 1`] = `
 <div>
   <div
     aria-label="Pad"
-    class="sc-bdvvtL enegtu"
+    class="sc-bdvvtL bMQvHd"
   >
     <svg
-      height="100px"
-      width="100px"
+      height="50%"
+      width="50%"
     >
       will_play.svg
     </svg>
@@ -36,11 +36,11 @@ exports[`Pad test Pad playing 1`] = `
 <div>
   <div
     aria-label="Pad"
-    class="sc-bdvvtL dAqfmc"
+    class="sc-bdvvtL gISjDH"
   >
     <svg
-      height="100px"
-      width="100px"
+      height="50%"
+      width="50%"
     >
       playing.svg
     </svg>

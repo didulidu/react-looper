@@ -23,3 +23,8 @@ export const StyledPad = styled.div`
     height: 100px;
   }
 `;
+
+export const iconDimension = {
+  width: "50%",
+  height: "50%",
+};

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useLooperContext } from "../../store/LooperContext";
-import Button from "../atoms/Button/Button";
-import Pad from "../atoms/Pad/Pad";
+import Button from "../../components/atoms/Button/Button";
+import Pad from "../../components/atoms/Pad/Pad";
 import { StyledFooter, StyledGrid, buttonDimension } from "./styles";
 import { ReactComponent as ButtonPlayIcon } from "../../assets/icons/button_play.svg";
 import { ReactComponent as ButtonPauseIcon } from "../../assets/icons/button_pause.svg";

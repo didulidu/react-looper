@@ -1,6 +1,9 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Button from "../components/atoms/Button/Button";
+import { ReactComponent as ButtonPlayIcon } from "../../assets/icons/button_play.svg";
+import { ReactComponent as ButtonStopIcon } from "../../assets/icons/button_pause.svg";
+import { buttonDimension } from "../pages/Looper/styles";
 
 export default {
   title: "Components/Button",
@@ -18,12 +21,12 @@ export const PlayButton = Template.bind({});
 PlayButton.args = {
   onClick: () => {},
   color: "lightblue",
-  children: "Play",
+  children: <ButtonPlayIcon {...buttonDimension} />,
 };
 
 export const StopButton = Template.bind({});
 StopButton.args = {
   onClick: () => {},
   color: "indianred",
-  children: "Stop",
+  children: <ButtonStopIcon {...buttonDimension} />,
 };

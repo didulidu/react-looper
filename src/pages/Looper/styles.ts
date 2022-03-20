@@ -6,7 +6,7 @@ export const StyledGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
 
   @media only screen and (max-width: 900px) {
-    width: 450px;
+    width: 420px;
   }
 `;
 

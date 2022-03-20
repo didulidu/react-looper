@@ -1,5 +1,5 @@
 import "./App.css";
-import Looper from "./components/Looper/Looper";
+import Looper from "./pages/Looper/Looper";
 import { LooperProvider } from "./store/LooperContext";
 
 function App() {

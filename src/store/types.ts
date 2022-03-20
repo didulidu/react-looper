@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Pad } from "../model/Pad";
 
 export type LooperContextType = {
@@ -5,4 +6,9 @@ export type LooperContextType = {
   playSingle: (padId: string) => void;
   playAll: () => void;
   stopAll: () => void;
+};
+
+export type LooperProviderProps = {
+  children: ReactNode;
+  initialState?: { pads: Pad[] };
 };

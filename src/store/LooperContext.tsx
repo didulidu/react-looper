@@ -10,7 +10,7 @@ import {
 } from "react";
 
 import { looperReducer, getDefaultLooperReducerState } from "./looperReducer";
-import { LooperContextType } from "./types";
+import { LooperContextType, LooperProviderProps } from "./types";
 
 export const LooperContext = createContext<LooperContextType>(
   {} as LooperContextType
@@ -18,14 +18,15 @@ export const LooperContext = createContext<LooperContextType>(
 
 export const useLooperContext = () => useContext(LooperContext);
 
-export const LooperProvider: FC = ({ children }) => {
-  const urls = require.context("../../public", false, /\.(mp3|mpga)$/).keys();
-  console.log(urls);
+export const LooperProvider: FC<LooperProviderProps> = ({
+  initialState,
+  children,
+}) => {
   const [intervalId, setIntervalId] = useState<null | NodeJS.Timer>(null);
 
   const [{ pads }, dispatch] = useReducer(
     looperReducer,
-    getDefaultLooperReducerState(urls)
+    initialState ?? getDefaultLooperReducerState()
   );
 
   const isLooperInactive = useMemo(

@@ -15,11 +15,12 @@ export type ActionType =
   | { type: "stopAll" }
   | { type: "startInterval" };
 
-export const getDefaultLooperReducerState = (
-  urls: string[]
-): LooperStateType => ({
-  pads: getPadsFromUrls(urls),
-});
+export const getDefaultLooperReducerState = (): LooperStateType => {
+  const urls = require.context("../../public", false, /\.(mp3|mpga)$/).keys();
+  return {
+    pads: getPadsFromUrls(urls),
+  };
+};
 
 export const looperReducer = (state: LooperStateType, action: ActionType) => {
   switch (action.type) {

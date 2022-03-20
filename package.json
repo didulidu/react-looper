@@ -30,7 +30,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/**/*.tsx",
-      "src/store/**/**"
+      "src/store/**/**",
+      "src/hooks/**"
     ]
   },
   "eslintConfig": {
